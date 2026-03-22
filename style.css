@@ -48,8 +48,9 @@ body::after {
 }
 
 .card-link {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .overlay::before {

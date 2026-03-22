@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Caso Canibal | Noir Files</title>
+
+<style>
+body {
+    margin: 0;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.85)),
+        url("fundo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* NAV */
+.navbar {
+  background: #111;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('caso1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  background: rgba(0,0,0,0.75);
+  padding: 25px;
+  color: #b30000;
+  font-size: 40px;
+}
+
+/* SEÇÕES */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 10%;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section img {
+  width: 420px;
+  border: 2px solid #222;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.text h2 {
+  color: #b30000;
+  font-size: 28px;
+}
+
+.text p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* alternância */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* CTA FINAL */
+.cta {
+  text-align: center;
+  padding: 120px 20px;
+  background: #080808;
+}
+
+.cta h2 {
+  color: #b30000;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  max-width: 600px;
+  margin: auto;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.cta button {
+  background: #b30000;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  background: #ff0000;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media(max-width: 800px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .section img {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">Noir Files</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>CASO CANIBAL</h1>
+</div>
+
+<!-- BLOCO 1 -->
+<div class="section">
+  <img src="pista.jpg">
+  <div class="text">
+    <h2>Algo está errado...</h2>
+    <p>
+      Pessoas desaparecem. Nenhum rastro. Nenhuma explicação.
+      Apenas fragmentos… restos… sinais de que algo muito pior está acontecendo.
+    </p>
+  </div>
+</div>
+
+<!-- BLOCO 2 -->
+<div class="section reverse">
+  <img src="seita.jpg">
+  <div class="text">
+    <h2>Eles não são comuns</h2>
+    <p>
+      Há indícios de uma organização.
+      Um grupo que acredita que consumir o outro… é evoluir.
+      Seus símbolos aparecem onde não deveriam existir.
+    </p>
+  </div>
+</div>
+
+<!-- BLOCO 3 -->
+<div class="section">
+  <img src="investigacao.jpg">
+  <div class="text">
+    <h2>Tudo está conectado</h2>
+    <p>
+      Fotografias. Relatórios. Depoimentos.
+      Cada detalhe parece isolado… até você perceber que todos apontam para a mesma verdade.
+    </p>
+  </div>
+</div>
+
+<!-- BLOCO 4 -->
+<div class="section reverse">
+  <img src="suspeito.jpg">
+  <div class="text">
+    <h2>Mas cuidado...</h2>
+    <p>
+      Nem todos querem que você descubra.
+      E quanto mais perto você chega… mais você se torna parte disso.
+    </p>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta">
+  <h2>Você consegue resolver esse caso?</h2>
+  <p>
+    Entre no dossiê completo, analise as evidências reais e descubra a verdade por trás do Caso Canibal.
+  </p>
+
+  <button onclick="comprar()">COMPRE AGORA</button>
+</div>
+
+<script>
+// animação scroll
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      sec.classList.add('show');
+    }
+  });
+});
+
+// botão compra
+function comprar() {
+  alert("Sistema de compra ainda não implementado");
+}
+</script>
+
+</body>
+</html>

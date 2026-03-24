@@ -19,6 +19,15 @@ body {
     padding: 10px;
   }
 
+
+@media (max-width: 600px) {
+
+  .logo img {
+    height: 30px;
+  }
+
+}
+
   .logo {
     margin-bottom: 10px;
   }
@@ -54,6 +63,7 @@ body {
 .logo img {
   height: 100px;
   width: auto;
+  max-width: 100%;
 }
 
 /* menu */

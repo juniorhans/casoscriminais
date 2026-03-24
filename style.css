@@ -11,15 +11,6 @@ body {
 }
 
 
-@media (max-width: 600px) {
-
-  .topbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-    min-height: 70px;
-  }
-
 
 /* 🔹 MOBILE */
 @media (max-width: 600px) {
@@ -48,7 +39,6 @@ body {
     margin-left: 0;
   }
 
-}
 
 
 .topbar {

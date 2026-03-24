@@ -11,6 +11,24 @@ body {
 }
 
 
+@media (max-width: 600px) {
+
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    margin-left: 0;
+  }
+
+}
+
 
 .topbar {
   position: fixed;

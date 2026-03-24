@@ -21,10 +21,21 @@ body {
   }
 
 
+/* 🔹 MOBILE */
 @media (max-width: 600px) {
+
+  .topbar {
+    flex-direction: row; /* mantém horizontal */
+    justify-content: space-between;
+    padding: 0 10px;
+  }
 
   .logo img {
     height: 30px;
+  }
+
+  .menu a {
+    font-size: 13px;
   }
 
 }

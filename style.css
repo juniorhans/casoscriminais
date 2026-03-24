@@ -12,24 +12,7 @@ body {
 
 
 
-/* 🔹 MOBILE */
-@media (max-width: 600px) {
 
-  .topbar {
-    flex-direction: row; /* mantém horizontal */
-    justify-content: space-between;
-    padding: 0 10px;
-  }
-
-  .logo img {
-    height: 1000px;
-  }
-
-  .menu a {
-    font-size: 13px;
-  }
-
-}
 
   .logo {
     margin-bottom: 10px;
@@ -356,5 +339,24 @@ body::after {
 .info span {
     font-size: 13px;
     opacity: 0.6;
+}
+
+/* 🔹 MOBILE */
+@media (max-width: 600px) {
+
+  .topbar {
+    flex-direction: row; /* mantém horizontal */
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .logo img {
+    height: 1000px;
+  }
+
+  .menu a {
+    font-size: 13px;
+  }
+
 }
 
